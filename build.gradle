@@ -15,6 +15,9 @@ dependencies {
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
+    defaultConfig{
+        applicationId "cn.ucai.superwechatt"
+    }
 
     sourceSets {
         main {
