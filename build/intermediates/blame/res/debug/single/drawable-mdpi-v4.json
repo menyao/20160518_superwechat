@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "D:\\superWeChatt\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\unread_count_bg.9.png",
+        "source": "D:\\superWeChatt\\res\\drawable-mdpi\\unread_count_bg.9.png"
+    }
+]
