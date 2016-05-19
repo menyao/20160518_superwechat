@@ -20,6 +20,7 @@ import com.easemob.EMCallBack;
 
 public class SuperWeChatApplication extends Application {
 
+	public static String SERVER_ROOT="http://localhost:8080/SuperWeChatServer/Server?request";
 	public static Context applicationContext;
 	private static SuperWeChatApplication instance;
 	// login user name
@@ -84,7 +85,7 @@ public class SuperWeChatApplication extends Application {
 	/**
 	 * 设置用户名
 	 *
-	 * @param user
+	 * @param username
 	 */
 	public void setUserName(String username) {
 	    hxSDKHelper.setHXId(username);
