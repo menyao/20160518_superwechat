@@ -10,6 +10,7 @@ public class Avatar extends Message implements java.io.Serializable {
 	/**
 	 * 
 	 */
+
 	private Integer mavatarId;
 	private Integer mavatarUserId;
 	private String mavatarUserName;
