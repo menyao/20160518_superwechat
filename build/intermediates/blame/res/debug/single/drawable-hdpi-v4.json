@@ -116,12 +116,12 @@
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\video_recorder_stop_btn.png"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\welcom_logo.png",
-        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\welcom_logo.png"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\show_head_toast_bg.9.png",
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\show_head_toast_bg.9.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\welcom_logo.png",
+        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\welcom_logo.png"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_account.png",
