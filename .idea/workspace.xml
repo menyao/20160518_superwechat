@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12e4edbd-8e51-4986-b9a3-ab9da298f284" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/ucai/superwechat/bean/User.java" afterPath="$PROJECT_DIR$/src/cn/ucai/superwechat/bean/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/ucai/superwechat/bean/Member.java" afterPath="$PROJECT_DIR$/src/cn/ucai/superwechat/bean/Member.java" />
     </list>
     <ignored path="superWeChatt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/bean/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66459626">
-              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
               <folding>
                 <element signature="e#1145#1146#0" expanded="true" />
                 <element signature="e#1171#1172#0" expanded="true" />
@@ -123,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Member.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Member.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/bean/Member.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.310559">
+              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,11 +139,8 @@
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1463646215742" expanded="true" signature="59:127308" placeholder="..." />
-                <marker date="1463646215742" expanded="true" signature="95:154" placeholder="..." />
-                <marker date="1463646215742" expanded="true" signature="127234:127251" placeholder="..." />
-                <marker date="1463646215742" expanded="true" signature="127234:127269" placeholder="..." />
-                <marker date="1463646215742" expanded="true" signature="127234:127282" placeholder="..." />
+                <marker date="1463646851679" expanded="true" signature="59:126978" placeholder="..." />
+                <marker date="1463646851679" expanded="true" signature="95:154" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1044,8 +1041,8 @@
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/bean/Group.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/bean/Contact.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/SuperWeChatApplication.java" />
-        <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/bean/Member.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/bean/User.java" />
+        <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/bean/Member.java" />
       </list>
     </option>
   </component>
@@ -1660,7 +1657,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463642797927</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="User中添加header和get、set方法以及equals和hashCode方法">
+      <created>1463646316507</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1463646316507</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1690,7 +1693,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5457227" sideWeight="0.44631305" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23415264" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3389392" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24967659" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -1726,7 +1729,8 @@
     <MESSAGE value="添加实体类" />
     <MESSAGE value="添加bean包实体类" />
     <MESSAGE value="实体类中添加equals和hashCode方法、SuperWeChatApplication添加全局变量和get、set方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="实体类中添加equals和hashCode方法、SuperWeChatApplication添加全局变量和get、set方法" />
+    <MESSAGE value="User中添加header和get、set方法以及equals和hashCode方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="User中添加header和get、set方法以及equals和hashCode方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2035,24 +2039,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/bean/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1463646215742" expanded="true" signature="59:127308" placeholder="..." />
-            <marker date="1463646215742" expanded="true" signature="95:154" placeholder="..." />
-            <marker date="1463646215742" expanded="true" signature="127234:127251" placeholder="..." />
-            <marker date="1463646215742" expanded="true" signature="127234:127269" placeholder="..." />
-            <marker date="1463646215742" expanded="true" signature="127234:127282" placeholder="..." />
+            <marker date="1463646851679" expanded="true" signature="59:126978" placeholder="..." />
+            <marker date="1463646851679" expanded="true" signature="95:154" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -2093,8 +2086,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/bean/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66459626">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
           <folding>
             <element signature="e#1145#1146#0" expanded="true" />
             <element signature="e#1171#1172#0" expanded="true" />
@@ -2107,6 +2100,14 @@
             <element signature="e#2505#2506#0" expanded="true" />
             <element signature="e#2539#2540#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/bean/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.310559">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
