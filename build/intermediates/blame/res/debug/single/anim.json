@@ -24,6 +24,10 @@
         "source": "D:\\superWeChatt\\res\\anim\\push_top_in.xml"
     },
     {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\anim\\pop_enter.xml",
+        "source": "D:\\superWeChatt\\res\\anim\\pop_enter.xml"
+    },
+    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\anim\\fade_out.xml",
         "source": "D:\\superWeChatt\\res\\anim\\fade_out.xml"
     },
@@ -54,6 +58,10 @@
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\anim\\voice_from_icon.xml",
         "source": "D:\\superWeChatt\\res\\anim\\voice_from_icon.xml"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\anim\\pop_exit.xml",
+        "source": "D:\\superWeChatt\\res\\anim\\pop_exit.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\anim\\fade_in.xml",

@@ -2,5 +2,57 @@
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\empty_photo.png",
         "source": "D:\\superWeChatt\\res\\drawable-nodpi\\empty_photo.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_piaoliuping.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\find_piaoliuping.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\friends_icon.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\friends_icon.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_gouwu.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\find_gouwu.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_normal.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\find_normal.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_pressed.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\find_pressed.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\geek.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\geek.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_yaoyiyao.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\find_yaoyiyao.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_fujin.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\find_fujin.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\mobile.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\mobile.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_erweima.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\find_erweima.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_icon.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\find_icon.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_friends.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\find_friends.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\find_youxi.png",
+        "source": "D:\\superWeChatt\\res\\drawable-nodpi\\find_youxi.png"
     }
 ]
