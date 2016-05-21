@@ -101,11 +101,12 @@
     <string name="Group_of_Lord">The group owner</string>
     <string name="Introduction">Brief</string>
     <string name="To_join_the_chat">Join the group</string>
-    <string name="login">Login</string>
-    <string name="user_name">User name</string>
-    <string name="password">Password</string>
-    <string name="register">Register</string>
-    <string name="confirmpassword">Confirm password</string>
+    <string name="login">登录</string>
+    <string name="user_name">用户名</string>
+    <string name="password">密码</string>
+    <string name="register">注册</string>
+    <string name="confirmpassword">确认密码</string>
+    <string name="avatar">头像</string>
     <string name="downwaiting">Downloading the file, please try again later</string>
     <string name="mute">Mute</string>
     <string name="Hands_free">Hands free</string>
@@ -279,7 +280,7 @@
     <string name="illegal_user_name">Illegal user name</string>
     <string name="robot_chat">Robot chat</string>
     <string name="title_user_profile">User Profile</string>
-    <string name="nickname">NickName</string>
+    <string name="nickname">昵称</string>
     <string name="dl_title_upload_photo">Upload Photo</string>
     <string name="dl_msg_local_upload">Local Upload</string>
     <string name="dl_msg_take_photo">Task Photo</string>
