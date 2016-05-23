@@ -4,16 +4,16 @@
         "source": "D:\\superWeChatt\\res\\layout\\activity_group_pick_contacts.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "D:\\superWeChatt\\res\\layout\\activity_main.xml"
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\context_menu_for_location.xml",
+        "source": "D:\\superWeChatt\\res\\layout\\context_menu_for_location.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_groups.xml",
         "source": "D:\\superWeChatt\\res\\layout\\fragment_groups.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\context_menu_for_location.xml",
-        "source": "D:\\superWeChatt\\res\\layout\\context_menu_for_location.xml"
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "D:\\superWeChatt\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\row_received_voice_call.xml",
@@ -24,12 +24,12 @@
         "source": "D:\\superWeChatt\\res\\layout\\row_contact.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_emojicon.xml",
-        "source": "D:\\superWeChatt\\res\\layout\\fragment_emojicon.xml"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\search_bar_with_padding.xml",
         "source": "D:\\superWeChatt\\res\\layout\\search_bar_with_padding.xml"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_emojicon.xml",
+        "source": "D:\\superWeChatt\\res\\layout\\fragment_emojicon.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\image_grid_fragment.xml",
