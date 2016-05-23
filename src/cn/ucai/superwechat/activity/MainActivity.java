@@ -63,8 +63,11 @@ import cn.ucai.superwechat.DemoHXSDKHelper;
 
 import cn.ucai.superwechat.db.InviteMessgeDao;
 import cn.ucai.superwechat.db.EMUserDao;
+import cn.ucai.superwechat.domain.EMUser;
 import cn.ucai.superwechat.domain.InviteMessage;
-import cn.ucai.superwechat.domain.User;
+import cn.ucai.superwechat.fragment.ChatAllHistoryFragment;
+import cn.ucai.superwechat.fragment.ContactlistFragment;
+import cn.ucai.superwechat.fragment.SettingsFragment;
 import cn.ucai.superwechat.utils.CommonUtils;
 
 
@@ -208,22 +211,22 @@ public class MainActivity extends BaseActivity implements EMEventListener {
                 
                 System.out.println("----------------"+usernames.toString());
                 EMLog.d("roster", "contacts size: " + usernames.size());
-                Map<String, User> userlist = new HashMap<String, User>();
+                Map<String, EMUser> userlist = new HashMap<String, EMUser>();
                 for (String username : usernames) {
-                    User user = new User();
+                    EMUser user = new EMUser();
                     user.setUsername(username);
                     setUserHearder(username, user);
                     userlist.put(username, user);
                 }
                 // 添加user"申请与通知"
-                User newFriends = new User();
+                EMUser newFriends = new EMUser();
                 newFriends.setUsername(Constant.NEW_FRIENDS_USERNAME);
                 String strChat = context.getString(R.string.Application_and_notify);
                 newFriends.setNick(strChat);
         
                 userlist.put(Constant.NEW_FRIENDS_USERNAME, newFriends);
                 // 添加"群聊"
-                User groupUser = new User();
+                EMUser groupUser = new EMUser();
                 String strGroup = context.getString(R.string.group_chat);
                 groupUser.setUsername(Constant.GROUP_USERNAME);
                 groupUser.setNick(strGroup);
@@ -231,26 +234,26 @@ public class MainActivity extends BaseActivity implements EMEventListener {
                 userlist.put(Constant.GROUP_USERNAME, groupUser);
                 
                  // 添加"聊天室"
-                User chatRoomItem = new User();
-                String strChatRoom = context.getString(R.string.chat_room);
-                chatRoomItem.setUsername(Constant.CHAT_ROOM);
-                chatRoomItem.setNick(strChatRoom);
-                chatRoomItem.setHeader("");
-                userlist.put(Constant.CHAT_ROOM, chatRoomItem);
+//                EMUser chatRoomItem = new EMUser();
+//                String strChatRoom = context.getString(R.string.chat_room);
+//                chatRoomItem.setUsername(Constant.CHAT_ROOM);
+//                chatRoomItem.setNick(strChatRoom);
+//                chatRoomItem.setHeader("");
+//                userlist.put(Constant.CHAT_ROOM, chatRoomItem);
                 
                 // 添加"Robot"
-        		User robotUser = new User();
-        		String strRobot = context.getString(R.string.robot_chat);
-        		robotUser.setUsername(Constant.CHAT_ROBOT);
-        		robotUser.setNick(strRobot);
-        		robotUser.setHeader("");
-        		userlist.put(Constant.CHAT_ROBOT, robotUser);
+//        		EMUser robotUser = new EMUser();
+//        		String strRobot = context.getString(R.string.robot_chat);
+//        		robotUser.setUsername(Constant.CHAT_ROBOT);
+//        		robotUser.setNick(strRobot);
+//        		robotUser.setHeader("");
+//        		userlist.put(Constant.CHAT_ROBOT, robotUser);
         		
                  // 存入内存
                 ((DemoHXSDKHelper)HXSDKHelper.getInstance()).setContactList(userlist);
                  // 存入db
                 EMUserDao dao = new EMUserDao(context);
-                List<User> users = new ArrayList<User>(userlist.values());
+                List<EMUser> users = new ArrayList<EMUser>(userlist.values());
                 dao.saveContactList(users);
 
                 HXSDKHelper.getInstance().notifyContactsSyncListener(true);
@@ -259,10 +262,10 @@ public class MainActivity extends BaseActivity implements EMEventListener {
                     HXSDKHelper.getInstance().notifyForRecevingEvents();
                 }
                 
-                ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getUserProfileManager().asyncFetchContactInfosFromServer(usernames,new EMValueCallBack<List<User>>() {
+                ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getUserProfileManager().asyncFetchContactInfosFromServer(usernames,new EMValueCallBack<List<EMUser>>() {
 
 					@Override
-					public void onSuccess(List<User> uList) {
+					public void onSuccess(List<EMUser> uList) {
 						((DemoHXSDKHelper)HXSDKHelper.getInstance()).updateContactList(uList);
 						((DemoHXSDKHelper)HXSDKHelper.getInstance()).getUserProfileManager().notifyContactInfosSyncListener(true);
 					}
@@ -304,7 +307,7 @@ public class MainActivity extends BaseActivity implements EMEventListener {
      * @param username
      * @param user
      */
-    private static void setUserHearder(String username, User user) {
+    private static void setUserHearder(String username, EMUser user) {
         String headerName = null;
         if (!TextUtils.isEmpty(user.getNick())) {
             headerName = user.getNick();
@@ -519,10 +522,10 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 		@Override
 		public void onContactAdded(List<String> usernameList) {			
 			// 保存增加的联系人
-			Map<String, User> localUsers = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
-			Map<String, User> toAddUsers = new HashMap<String, User>();
+			Map<String, EMUser> localUsers = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
+			Map<String, EMUser> toAddUsers = new HashMap<String, EMUser>();
 			for (String username : usernameList) {
-				User user = setUserHead(username);
+				EMUser user = setUserHead(username);
 				// 添加好友时可能会回调added方法两次
 				if (!localUsers.containsKey(username)) {
 					userDao.saveContact(user);
@@ -539,7 +542,7 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 		@Override
 		public void onContactDeleted(final List<String> usernameList) {
 			// 被删除
-			Map<String, User> localUsers = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
+			Map<String, EMUser> localUsers = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList();
 			for (String username : usernameList) {
 				localUsers.remove(username);
 				userDao.deleteContact(username);
@@ -856,7 +859,7 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 		// 保存msg
 		inviteMessgeDao.saveMessage(msg);
 		// 未读数加1
-		User user = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList().get(Constant.NEW_FRIENDS_USERNAME);
+		EMUser user = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList().get(Constant.NEW_FRIENDS_USERNAME);
 		if (user.getUnreadMsgCount() == 0)
 			user.setUnreadMsgCount(user.getUnreadMsgCount() + 1);
 	}
@@ -867,8 +870,8 @@ public class MainActivity extends BaseActivity implements EMEventListener {
 	 * @param username
 	 * @return
 	 */
-	User setUserHead(String username) {
-		User user = new User();
+	EMUser setUserHead(String username) {
+		EMUser user = new EMUser();
 		user.setUsername(username);
 		String headerName = null;
 		if (!TextUtils.isEmpty(user.getNick())) {

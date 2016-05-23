@@ -25,15 +25,16 @@ import cn.ucai.superwechat.bean.Contact;
 import cn.ucai.superwechat.bean.Group;
 import cn.ucai.superwechat.bean.Member;
 import cn.ucai.superwechat.bean.User;
+import cn.ucai.superwechat.data.RequestManager;
 
 public class SuperWeChatApplication extends Application {
+	public  static String SERVER_ROOT = "http://192.168.191.1:8080/SuperWeChatServer/Server";
 
-	public static String SERVER_ROOT="http://localhost:8080/SuperWeChatServer/Server?request";
 	public static Context applicationContext;
 	private static SuperWeChatApplication instance;
 	// login user name
 	public final String PREF_USERNAME = "username";
-	
+
 	/**
 	 * 当前用户nickname,为了苹果推送不是userid而是昵称
 	 */
@@ -43,34 +44,35 @@ public class SuperWeChatApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-        applicationContext = this;
-        instance = this;
+		applicationContext = this;
+		instance = this;
 
-        /**
-         * this function will initialize the HuanXin SDK
-         * 
-         * @return boolean true if caller can continue to call HuanXin related APIs after calling onInit, otherwise false.
-         * 
-         * 环信初始化SDK帮助函数
-         * 返回true如果正确初始化，否则false，如果返回为false，请在后续的调用中不要调用任何和环信相关的代码
-         * 
-         * for example:
-         * 例子：
-         * 
-         * public class DemoHXSDKHelper extends HXSDKHelper
-         * 
-         * HXHelper = new DemoHXSDKHelper();
-         * if(HXHelper.onInit(context)){
-         *     // do HuanXin related work
-         * }
-         */
-        hxSDKHelper.onInit(applicationContext);
+		/**
+		 * this function will initialize the HuanXin SDK
+		 *
+		 * @return boolean true if caller can continue to call HuanXin related APIs after calling onInit, otherwise false.
+		 *
+		 * 环信初始化SDK帮助函数
+		 * 返回true如果正确初始化，否则false，如果返回为false，请在后续的调用中不要调用任何和环信相关的代码
+		 *
+		 * for example:
+		 * 例子：
+		 *
+		 * public class DemoHXSDKHelper extends HXSDKHelper
+		 *
+		 * HXHelper = new DemoHXSDKHelper();
+		 * if(HXHelper.onInit(context)){
+		 *     // do HuanXin related work
+		 * }
+		 */
+		hxSDKHelper.onInit(applicationContext);
+		RequestManager.init(applicationContext);
 	}
 
 	public static SuperWeChatApplication getInstance() {
 		return instance;
 	}
- 
+
 
 	/**
 	 * 获取当前登陆用户名
@@ -78,7 +80,7 @@ public class SuperWeChatApplication extends Application {
 	 * @return
 	 */
 	public String getUserName() {
-	    return hxSDKHelper.getHXId();
+		return hxSDKHelper.getHXId();
 	}
 
 	/**
@@ -96,7 +98,7 @@ public class SuperWeChatApplication extends Application {
 	 * @param username
 	 */
 	public void setUserName(String username) {
-	    hxSDKHelper.setHXId(username);
+		hxSDKHelper.setHXId(username);
 	}
 
 	/**
@@ -106,7 +108,7 @@ public class SuperWeChatApplication extends Application {
 	 * @param pwd
 	 */
 	public void setPassword(String pwd) {
-	    hxSDKHelper.setPassword(pwd);
+		hxSDKHelper.setPassword(pwd);
 	}
 
 	/**
@@ -114,71 +116,65 @@ public class SuperWeChatApplication extends Application {
 	 */
 	public void logout(final boolean isGCM,final EMCallBack emCallBack) {
 		// 先调用sdk logout，在清理app中自己的数据
-	    hxSDKHelper.logout(isGCM,emCallBack);
+		hxSDKHelper.logout(isGCM,emCallBack);
 	}
+
 	/**全局的当前登录用户对象*/
 	private User user;
 	/**全局的当前登录用户的好友列表*/
-	private ArrayList<Contact> contactList = new ArrayList<>();
-	/**
-	 * 全局的当前登录用户的好友集合
-	 */
-	private HashMap<String, Contact> userList = new HashMap<String, Contact>();
-	/**
-	 * 全局的群组集合
-	 */
+	private ArrayList<Contact> contactList = new ArrayList<Contact>();
+	/**全局的当前登录用户的好友集合*/
+	private HashMap<String,Contact> userList = new HashMap<String, Contact>();
+	/**全局的群组集合*/
 	private ArrayList<Group> groupList = new ArrayList<Group>();
-	/**
-	 * 全局的当前公共群列表
-	 */
-	private ArrayList<Group> publicGropList = new ArrayList<Group>();
-	/**
-	 * 全局的群组成员列表
-	 */
-	private HashMap<String, ArrayList<Member>> groupMembers = new HashMap<String, ArrayList<Member>>();
+	/**全局的当前公共群列表*/
+	private ArrayList<Group> publicGroupList = new ArrayList<Group>();
+	/**全局的群组成员列表*/
+	private HashMap<String,ArrayList<Member>> groupMembers = new HashMap<String, ArrayList<Member>>();
 
 	public User getUser() {
 		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
 	}
 
 	public ArrayList<Contact> getContactList() {
 		return contactList;
 	}
 
-	public void setContactList(ArrayList<Contact> contactList) {
-		this.contactList = contactList;
-	}
-
 	public HashMap<String, Contact> getUserList() {
 		return userList;
-	}
-
-	public void setUserList(HashMap<String, Contact> userList) {
-		this.userList = userList;
 	}
 
 	public ArrayList<Group> getGroupList() {
 		return groupList;
 	}
 
-	public void setGroupList(ArrayList<Group> groupList) {
-		this.groupList = groupList;
-	}
-
-	public ArrayList<Group> getPublicGropList() {
-		return publicGropList;
-	}
-
-	public void setPublicGropList(ArrayList<Group> publicGropList) {
-		this.publicGropList = publicGropList;
+	public ArrayList<Group> getPublicGroupList() {
+		return publicGroupList;
 	}
 
 	public HashMap<String, ArrayList<Member>> getGroupMembers() {
 		return groupMembers;
+	}
+
+	public void setUser(User user) {
+
+		this.user = user;
+	}
+
+	public void setContactList(ArrayList<Contact> contactList) {
+		this.contactList = contactList;
+	}
+
+	public void setUserList(HashMap<String, Contact> userList) {
+		this.userList = userList;
+	}
+
+	public void setGroupList(ArrayList<Group> groupList) {
+		this.groupList = groupList;
+	}
+
+	public void setPublicGroupList(ArrayList<Group> publicGroupList) {
+		this.publicGroupList = publicGroupList;
 	}
 
 	public void setGroupMembers(HashMap<String, ArrayList<Member>> groupMembers) {
