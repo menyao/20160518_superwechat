@@ -120,6 +120,10 @@
         "source": "D:\\superWeChatt\\res\\layout\\activity_user_profile.xml"
     },
     {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\popu_show_avatar.xml",
+        "source": "D:\\superWeChatt\\res\\layout\\popu_show_avatar.xml"
+    },
+    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\row_sent_video_call.xml",
         "source": "D:\\superWeChatt\\res\\layout\\row_sent_video_call.xml"
     },
@@ -296,12 +300,12 @@
         "source": "D:\\superWeChatt\\res\\layout\\activity_show_file.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\activity_new_group.xml",
-        "source": "D:\\superWeChatt\\res\\layout\\activity_new_group.xml"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\row_contact_with_checkbox.xml",
         "source": "D:\\superWeChatt\\res\\layout\\row_contact_with_checkbox.xml"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\activity_new_group.xml",
+        "source": "D:\\superWeChatt\\res\\layout\\activity_new_group.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\row_received_message.xml",

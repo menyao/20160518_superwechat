@@ -320,16 +320,16 @@
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\login_error_icon.png"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\smiley_minus_btn_nor.png",
-        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\smiley_minus_btn_nor.png"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\type_select_btn_pressed.png",
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\type_select_btn_pressed.png"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\chatting_biaoqing_btn_enable.png",
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\chatting_biaoqing_btn_enable.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\smiley_minus_btn_nor.png",
+        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\smiley_minus_btn_nor.png"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\chatfrom_voice_playing_f3.png",
