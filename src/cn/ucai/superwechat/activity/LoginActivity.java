@@ -319,6 +319,7 @@ public class LoginActivity extends BaseActivity {
                             utils.downloadFile(response, file, false);
                         }
                     }).execute(null);
+            Log.e("main", "download contact list");
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {

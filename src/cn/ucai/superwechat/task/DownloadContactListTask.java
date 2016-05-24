@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-
 import com.android.volley.Response;
 
 import java.util.ArrayList;
@@ -21,9 +20,6 @@ import cn.ucai.superwechat.data.GsonRequest;
 import cn.ucai.superwechat.data.OkHttpUtils;
 
 
-/**
- * Created by leon on 2016/5/22.
- */
 public class DownloadContactListTask extends BaseActivity {
     public static final String TAG = DownloadContactListTask.class.getName();
     Context mContext;
@@ -40,8 +36,9 @@ public class DownloadContactListTask extends BaseActivity {
     request=download_contact_all_list&m_contact_user_name=*/
     public void initDownloadContactListUrl() {
         try {
-            downloadContactListUrl = new ApiParams().with(I.User.USER_NAME, userName)
+            downloadContactListUrl = new ApiParams().with(I.Contact.USER_NAME, userName)
                     .getRequestUrl(I.REQUEST_DOWNLOAD_CONTACT_ALL_LIST);
+            Log.e(TAG,"downloadContactListUrl="+downloadContactListUrl);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -60,6 +57,7 @@ public class DownloadContactListTask extends BaseActivity {
                 if (contacts == null) {
                     return;
                 }
+                Log.e(TAG,"responseDownloadContactListListener,contacts.size="+contacts.length);
                 ArrayList<Contact> list = OkHttpUtils.array2List(contacts);
                 SuperWeChatApplication instance = SuperWeChatApplication.getInstance();
                 ArrayList<Contact> contactList = instance.getContactList();

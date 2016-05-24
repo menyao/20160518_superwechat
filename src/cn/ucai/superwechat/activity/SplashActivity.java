@@ -59,6 +59,7 @@ public class SplashActivity extends BaseActivity {
 			String userName= SuperWeChatApplication.getInstance().getUserName();
 			UserDao dao=new UserDao(mContext);
 			User user = dao.findUserByUserName(userName);
+			Log.e("main","splash...download username="+userName);
 			SuperWeChatApplication.getInstance().setUser(user);
 			new DownloadContactListTask(mContext,userName).execute();
 			new DownloadAllGroupsTask(mContext,userName).execute();

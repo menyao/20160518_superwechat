@@ -152,12 +152,12 @@
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\ee_5.png"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\chatting_setmode_voice_btn_normal.png",
-        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\chatting_setmode_voice_btn_normal.png"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\default_face.9.png",
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\default_face.9.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\chatting_setmode_voice_btn_normal.png",
+        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\chatting_setmode_voice_btn_normal.png"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\dx_checkbox_gray_on.png",
