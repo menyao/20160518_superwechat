@@ -70,6 +70,7 @@ import cn.ucai.superwechat.bean.Contact;
 import cn.ucai.superwechat.db.InviteMessgeDao;
 import cn.ucai.superwechat.db.EMUserDao;
 import cn.ucai.superwechat.domain.EMUser;
+import cn.ucai.superwechat.utils.UserUtils;
 import cn.ucai.superwechat.widget.Sidebar;
 import com.easemob.exceptions.EaseMobException;
 import com.easemob.util.EMLog;
@@ -472,7 +473,6 @@ public class ContactlistFragment extends Fragment {
 	 * 获取联系人列表，并过滤掉黑名单和排序
 	 */
 	private void getContactList() {
-		contactList.clear();
 		mContactList.clear();
 		//获取本地好友列表
 		ArrayList<Contact> contactList= SuperWeChatApplication.getInstance().getContactList();
@@ -481,10 +481,9 @@ public class ContactlistFragment extends Fragment {
 		// 添加"群聊"
 		Contact groupUser = new Contact();
 		String strGroup = getActivity().getString(R.string.group_chat);
-		groupUser.setMUserName(Constant.GROUP_USERNAME);
+		groupUser.setMContactCname(Constant.GROUP_USERNAME);
 		groupUser.setMUserNick(strGroup);
-		groupUser.setHeader("");
-		if (!mContactList.contains(groupUser)) {
+		if (mContactList.indexOf(groupUser)==-1) {
 			this.mContactList.add(0,groupUser);
 		}
 
@@ -493,19 +492,21 @@ public class ContactlistFragment extends Fragment {
 		newFriends.setMContactCname(Constant.NEW_FRIENDS_USERNAME);
 		String strChat = getActivity().getString(R.string.Application_and_notify);
 		newFriends.setMUserNick(strChat);
-		newFriends.setHeader("");
-		if (!mContactList.contains(newFriends)) {
+		if (mContactList.indexOf(newFriends)==-1) {
 			this.mContactList.add(0,newFriends);
 		}
 
-		// 排序
-//		Collections.sort(contactList, new Comparator<EMUser>() {
-//
-//			@Override
-//			public int compare(EMUser lhs, EMUser rhs) {
-//				return lhs.getUsername().compareTo(rhs.getUsername());
-//			}
-//		});
+        for (Contact contact : mContactList) {
+            UserUtils.setUserHearder(contact.getMContactCname(), contact);
+        }
+        // 排序
+		Collections.sort(this.mContactList, new Comparator<Contact>() {
+
+			@Override
+			public int compare(Contact lhs, Contact rhs) {
+				return lhs.getHeader().compareTo(rhs.getHeader());
+			}
+		});
 
 //		if(users.get(Constant.CHAT_ROBOT)!=null){
 //			contactList.add(0, users.get(Constant.CHAT_ROBOT));

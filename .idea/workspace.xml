@@ -16,15 +16,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/ucai/superwechat/fragment/ContactlistFragment.java" afterPath="$PROJECT_DIR$/src/cn/ucai/superwechat/fragment/ContactlistFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/ucai/superwechat/utils/UserUtils.java" afterPath="$PROJECT_DIR$/src/cn/ucai/superwechat/utils/UserUtils.java" />
     </list>
     <ignored path="superWeChatt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,8 +73,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/activity/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.452055">
-              <caret line="227" column="25" selection-start-line="227" selection-start-column="25" selection-end-line="227" selection-end-column="25" />
+            <state vertical-scroll-proportion="-2.2328768">
+              <caret line="308" column="7" selection-start-line="308" selection-start-column="7" selection-end-line="308" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -80,42 +83,12 @@
       <file leaf-file-name="ContactlistFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/fragment/ContactlistFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.1247602">
-              <caret line="517" column="0" selection-start-line="517" selection-start-column="0" selection-end-line="517" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.16123189">
+              <caret line="491" column="43" selection-start-line="491" selection-start-column="43" selection-end-line="491" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4262#4320#0" expanded="true" />
-                <element signature="e#6368#6383#0" expanded="true" />
-                <element signature="e#12142#12185#0" expanded="true" />
-                <element signature="e#12208#12256#0" expanded="true" />
-                <element signature="e#13373#13431#0" expanded="true" />
-                <element signature="e#13454#13516#0" expanded="true" />
-                <element signature="e#13539#13601#0" expanded="true" />
-                <element signature="e#15672#15716#0" expanded="true" />
-                <element signature="e#16057#16113#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/adapter/MessageAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="572" column="20" selection-start-line="572" selection-start-column="20" selection-end-line="572" selection-end-column="20" />
-              <folding>
-                <element signature="e#6766#6767#0" expanded="false" />
-                <element signature="e#6818#6819#0" expanded="false" />
-                <element signature="e#7738#7739#0" expanded="false" />
-                <element signature="e#7760#7761#0" expanded="false" />
-                <element signature="e#7819#7820#0" expanded="false" />
-                <element signature="e#7844#7845#0" expanded="false" />
-                <element signature="e#26194#26195#0" expanded="false" />
-                <element signature="e#26250#26251#0" expanded="false" />
-                <element signature="e#38787#38788#0" expanded="false" />
-                <element signature="e#38845#38846#0" expanded="false" />
-                <element signature="e#47898#47899#0" expanded="false" />
-                <element signature="e#47948#47949#0" expanded="false" />
+                <element signature="e#16426#16581#0" expanded="true" />
+                <element signature="e#16580#16581#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,24 +98,9 @@
         <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/utils/UserUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="row_sent_voice.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/row_sent_voice.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+              <caret line="158" column="37" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="37" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -1117,18 +1075,19 @@
         <option value="$PROJECT_DIR$/res/layout/row_sent_video_call.xml" />
         <option value="$PROJECT_DIR$/res/layout/row_sent_voice.xml" />
         <option value="$PROJECT_DIR$/res/layout/row_sent_voice_call.xml" />
-        <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/utils/UserUtils.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/adapter/MessageAdapter.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/task/DownloadContactListTask.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/activity/SplashActivity.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/SuperWeChatApplication.java" />
+        <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/utils/UserUtils.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/fragment/ContactlistFragment.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="433" />
-    <option name="width" value="1242" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1618" />
     <option name="height" value="870" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -1914,7 +1873,13 @@
       <option name="project" value="LOCAL" />
       <updated>1464071222785</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="添加申请与通知、群聊">
+      <created>1464072869357</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1464072869357</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1927,16 +1892,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="433" y="0" width="1242" height="870" extended-state="0" />
+    <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14219475" sideWeight="0.46153846" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13569322" sideWeight="0.46248382" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14219475" sideWeight="0.53846157" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13569322" sideWeight="0.5375162" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6784661" sideWeight="0.44631305" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22566372" sideWeight="0.49482536" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51004636" sideWeight="0.48188874" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1944,7 +1910,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9660767" sideWeight="0.1293661" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.64615387" sideWeight="0.49459043" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45601553" sideWeight="0.49459043" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24967659" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -1956,7 +1922,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3259587" sideWeight="0.89391977" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1993,7 +1958,8 @@
     <MESSAGE value="修改联系人头像为NetImageview" />
     <MESSAGE value="显示好友头像错误修改，聊天好友显示昵称、头像" />
     <MESSAGE value="添加接收广播、集成setOnclick方法到一起" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加接收广播、集成setOnclick方法到一起" />
+    <MESSAGE value="添加申请与通知、群聊" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加申请与通知、群聊" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2223,6 +2189,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="179" column="25" selection-start-line="179" selection-start-column="25" selection-end-line="179" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2446,48 +2415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/row_sent_voice.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/utils/UserUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/adapter/MessageAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="572" column="20" selection-start-line="572" selection-start-column="20" selection-end-line="572" selection-end-column="20" />
-          <folding>
-            <element signature="e#6766#6767#0" expanded="false" />
-            <element signature="e#6818#6819#0" expanded="false" />
-            <element signature="e#7738#7739#0" expanded="false" />
-            <element signature="e#7760#7761#0" expanded="false" />
-            <element signature="e#7819#7820#0" expanded="false" />
-            <element signature="e#7844#7845#0" expanded="false" />
-            <element signature="e#26194#26195#0" expanded="false" />
-            <element signature="e#26250#26251#0" expanded="false" />
-            <element signature="e#38787#38788#0" expanded="false" />
-            <element signature="e#38845#38846#0" expanded="false" />
-            <element signature="e#47898#47899#0" expanded="false" />
-            <element signature="e#47948#47949#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/activity/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2506,29 +2433,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/adapter/MessageAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.051823415">
+          <caret line="572" column="20" selection-start-line="572" selection-start-column="20" selection-end-line="572" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#629#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/row_sent_voice.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.452055">
-          <caret line="227" column="25" selection-start-line="227" selection-start-column="25" selection-end-line="227" selection-end-column="25" />
+        <state vertical-scroll-proportion="-2.2328768">
+          <caret line="308" column="7" selection-start-line="308" selection-start-column="7" selection-end-line="308" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/utils/UserUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="158" column="37" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/fragment/ContactlistFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1247602">
-          <caret line="517" column="0" selection-start-line="517" selection-start-column="0" selection-end-line="517" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.16123189">
+          <caret line="491" column="43" selection-start-line="491" selection-start-column="43" selection-end-line="491" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4262#4320#0" expanded="true" />
-            <element signature="e#6368#6383#0" expanded="true" />
-            <element signature="e#12142#12185#0" expanded="true" />
-            <element signature="e#12208#12256#0" expanded="true" />
-            <element signature="e#13373#13431#0" expanded="true" />
-            <element signature="e#13454#13516#0" expanded="true" />
-            <element signature="e#13539#13601#0" expanded="true" />
-            <element signature="e#15672#15716#0" expanded="true" />
-            <element signature="e#16057#16113#0" expanded="true" />
+            <element signature="e#16426#16581#0" expanded="true" />
+            <element signature="e#16580#16581#0" expanded="true" />
           </folding>
         </state>
       </provider>
