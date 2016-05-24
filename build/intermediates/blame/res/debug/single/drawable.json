@@ -56,16 +56,16 @@
         "source": "D:\\superWeChatt\\res\\drawable\\chat_file_selector.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\photogrid_list_selector.xml",
-        "source": "D:\\superWeChatt\\res\\drawable\\photogrid_list_selector.xml"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\recording_text_hint_bg.xml",
         "source": "D:\\superWeChatt\\res\\drawable\\recording_text_hint_bg.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_white_pressed_shape.xml",
         "source": "D:\\superWeChatt\\res\\drawable\\btn_white_pressed_shape.xml"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\photogrid_list_selector.xml",
+        "source": "D:\\superWeChatt\\res\\drawable\\photogrid_list_selector.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\search_clear.xml",
@@ -244,12 +244,12 @@
         "source": "D:\\superWeChatt\\res\\drawable\\chatfrom_bg.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_gray_pressed_shape.xml",
-        "source": "D:\\superWeChatt\\res\\drawable\\btn_gray_pressed_shape.xml"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\sidebar_background_pressed.xml",
         "source": "D:\\superWeChatt\\res\\drawable\\sidebar_background_pressed.xml"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_gray_pressed_shape.xml",
+        "source": "D:\\superWeChatt\\res\\drawable\\btn_gray_pressed_shape.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\nickename_input_bg.xml",
@@ -280,12 +280,12 @@
         "source": "D:\\superWeChatt\\res\\drawable\\btn_blue_pressed_shape.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\call_hangup_bg.xml",
-        "source": "D:\\superWeChatt\\res\\drawable\\call_hangup_bg.xml"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_blue_selector.xml",
         "source": "D:\\superWeChatt\\res\\drawable\\btn_blue_selector.xml"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\call_hangup_bg.xml",
+        "source": "D:\\superWeChatt\\res\\drawable\\call_hangup_bg.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\call_answer_bg.xml",
