@@ -152,12 +152,12 @@
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\ee_5.png"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\default_face.9.png",
-        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\default_face.9.png"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\chatting_setmode_voice_btn_normal.png",
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\chatting_setmode_voice_btn_normal.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\default_face.9.png",
+        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\default_face.9.png"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\dx_checkbox_gray_on.png",
@@ -268,12 +268,12 @@
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\ee_13.png"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_10.png",
-        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\ee_10.png"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\location_msg.9.png",
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\location_msg.9.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_10.png",
+        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\ee_10.png"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\profile_headphoto_update_icon.png",
@@ -516,12 +516,12 @@
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\conversation_selected.png"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\video_recorder_start_btn.png",
-        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\video_recorder_start_btn.png"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mm_listitem_disable.9.png",
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\mm_listitem_disable.9.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\video_recorder_start_btn.png",
+        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\video_recorder_start_btn.png"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_24.png",

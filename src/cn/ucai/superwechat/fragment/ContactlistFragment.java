@@ -22,8 +22,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -72,7 +74,7 @@ import com.easemob.util.EMLog;
 
 /**
  * 联系人列表页
- * 
+ *
  */
 public class ContactlistFragment extends Fragment {
 	public static final String TAG = "ContactlistFragment";
@@ -92,6 +94,7 @@ public class ContactlistFragment extends Fragment {
 	Handler handler = new Handler();
     private EMUser toBeProcessUser;
     private String toBeProcessUsername;
+	ContactListChangeReceiver mReceiver;
 
 	class HXContactSyncListener implements HXSDKHelper.HXSyncListener {
 		@Override
@@ -112,13 +115,13 @@ public class ContactlistFragment extends Fragment {
 		                        progressBar.setVisibility(View.GONE);
 		                    }
 		                }
-		                
+
 		            });
 				}
 			});
 		}
 	}
-	
+
 	class HXBlackListSyncListener implements HXSDKHelper.HXSyncListener {
 
         @Override
@@ -130,19 +133,19 @@ public class ContactlistFragment extends Fragment {
                     blackList = EMContactManager.getInstance().getBlackListUsernames();
                     refresh();
                 }
-                
+
             });
         }
-	    
+
 	};
-	
+
 	class HXContactInfoSyncListener implements HXSDKHelper.HXSyncListener{
 
 		@Override
 		public void onSyncSucess(final boolean success) {
 			EMLog.d(TAG, "on contactinfo list sync success:" + success);
 			getActivity().runOnUiThread(new Runnable() {
-				
+
 				@Override
 				public void run() {
 					progressBar.setVisibility(View.GONE);
@@ -152,9 +155,9 @@ public class ContactlistFragment extends Fragment {
 				}
 			});
 		}
-		
+
 	}
-	
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.fragment_contact_list, container, false);
@@ -170,13 +173,13 @@ public class ContactlistFragment extends Fragment {
 		listView = (ListView) getView().findViewById(R.id.list);
 		sidebar = (Sidebar) getView().findViewById(R.id.sidebar);
 		sidebar.setListView(listView);
-        
+
 		//黑名单列表
 		blackList = EMContactManager.getInstance().getBlackListUsernames();
 		contactList = new ArrayList<EMUser>();
 		// 获取设置contactlist
 		getContactList();
-		
+
 		//搜索框
 		query = (EditText) getView().findViewById(R.id.query);
 		query.setHint(R.string.search);
@@ -188,7 +191,7 @@ public class ContactlistFragment extends Fragment {
 					clearSearch.setVisibility(View.VISIBLE);
 				} else {
 					clearSearch.setVisibility(View.INVISIBLE);
-					
+
 				}
 			}
 
@@ -205,78 +208,90 @@ public class ContactlistFragment extends Fragment {
 				hideSoftKeyboard();
 			}
 		});
-		
-		// 设置adapter
-		adapter = new ContactAdapter(getActivity(), R.layout.row_contact, contactList);
-		listView.setAdapter(adapter);
-		listView.setOnItemClickListener(new OnItemClickListener() {
 
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				String username = adapter.getItem(position).getUsername();
-				if (Constant.NEW_FRIENDS_USERNAME.equals(username)) {
-					// 进入申请与通知页面
-					EMUser user = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList().get(Constant.NEW_FRIENDS_USERNAME);
-					user.setUnreadMsgCount(0);
-					startActivity(new Intent(getActivity(), NewFriendsMsgActivity.class));
-				} else if (Constant.GROUP_USERNAME.equals(username)) {
-					// 进入群聊列表页面
-					startActivity(new Intent(getActivity(), GroupsActivity.class));
-				} else if(Constant.CHAT_ROOM.equals(username)){
-					//进入聊天室列表页面
-				    startActivity(new Intent(getActivity(), PublicChatRoomsActivity.class));
-				}else if(Constant.CHAT_ROBOT.equals(username)){
-					//进入Robot列表页面
-					startActivity(new Intent(getActivity(), RobotsActivity.class));
-				}else {
-					// demo中直接进入聊天页面，实际一般是进入用户详情页
-					startActivity(new Intent(getActivity(), ChatActivity.class).putExtra("userId", adapter.getItem(position).getUsername()));
-				}
-			}
-		});
-		listView.setOnTouchListener(new OnTouchListener() {
+        setContactItemClickListener();
+        setContactListTouchListener();
+        setAddContactListener();
 
-			@Override
-			public boolean onTouch(View v, MotionEvent event) {
-				// 隐藏软键盘
-				if (getActivity().getWindow().getAttributes().softInputMode != WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN) {
-					if (getActivity().getCurrentFocus() != null)
-						inputMethodManager.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(),
-								InputMethodManager.HIDE_NOT_ALWAYS);
-				}
-				return false;
-			}
-		});
-
-		ImageView addContactView = (ImageView) getView().findViewById(R.id.iv_new_contact);
-		// 进入添加好友页
-		addContactView.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				startActivity(new Intent(getActivity(), AddContactActivity.class));
-			}
-		});
 		registerForContextMenu(listView);
-		
+
 		progressBar = (View) getView().findViewById(R.id.progress_bar);
 
 		contactSyncListener = new HXContactSyncListener();
 		HXSDKHelper.getInstance().addSyncContactListener(contactSyncListener);
-		
+
 		blackListSyncListener = new HXBlackListSyncListener();
 		HXSDKHelper.getInstance().addSyncBlackListListener(blackListSyncListener);
-		
+
 		contactInfoSyncListener = new HXContactInfoSyncListener();
 		((DemoHXSDKHelper)HXSDKHelper.getInstance()).getUserProfileManager().addSyncContactInfoListener(contactInfoSyncListener);
-		
+
 		if (!HXSDKHelper.getInstance().isContactsSyncedWithServer()) {
 			progressBar.setVisibility(View.VISIBLE);
 		} else {
 			progressBar.setVisibility(View.GONE);
 		}
+        registerContactListChangRecevier();
 	}
 
+	private void setAddContactListener(){
+        ImageView addContactView = (ImageView) getView().findViewById(R.id.iv_new_contact);
+        // 进入添加好友页
+        addContactView.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AddContactActivity.class));
+            }
+        });
+    }
+
+	private void setContactListTouchListener(){
+        listView.setOnTouchListener(new OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // 隐藏软键盘
+                if (getActivity().getWindow().getAttributes().softInputMode != WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN) {
+                    if (getActivity().getCurrentFocus() != null)
+                        inputMethodManager.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(),
+                                InputMethodManager.HIDE_NOT_ALWAYS);
+                }
+                return false;
+            }
+        });
+    }
+
+    private void setContactItemClickListener(){
+        // 设置adapter
+        adapter = new ContactAdapter(getActivity(), R.layout.row_contact, contactList);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String username = adapter.getItem(position).getUsername();
+                if (Constant.NEW_FRIENDS_USERNAME.equals(username)) {
+                    // 进入申请与通知页面
+                    EMUser user = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList().get(Constant.NEW_FRIENDS_USERNAME);
+                    user.setUnreadMsgCount(0);
+                    startActivity(new Intent(getActivity(), NewFriendsMsgActivity.class));
+                } else if (Constant.GROUP_USERNAME.equals(username)) {
+                    // 进入群聊列表页面
+                    startActivity(new Intent(getActivity(), GroupsActivity.class));
+                } else if(Constant.CHAT_ROOM.equals(username)){
+                    //进入聊天室列表页面
+                    startActivity(new Intent(getActivity(), PublicChatRoomsActivity.class));
+                }else if(Constant.CHAT_ROBOT.equals(username)){
+                    //进入Robot列表页面
+                    startActivity(new Intent(getActivity(), RobotsActivity.class));
+                }else {
+                    // demo中直接进入聊天页面，实际一般是进入用户详情页
+                    startActivity(new Intent(getActivity(), ChatActivity.class).putExtra("userId", adapter.getItem(position).getUsername()));
+                }
+            }
+        });
+    }
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
@@ -324,9 +339,9 @@ public class ContactlistFragment extends Fragment {
 		}
 	}
 
-	/**
+    /**
 	 * 删除联系人
-	 * 
+	 *
 	 * @param toDeleteUser
 	 */
 	public void deleteContact(final EMUser tobeDeleteUser) {
@@ -401,9 +416,9 @@ public class ContactlistFragment extends Fragment {
 				}
 			}
 		}).start();
-		
+
 	}
-	
+
 	// 刷新ui
 	public void refresh() {
 		try {
@@ -425,17 +440,20 @@ public class ContactlistFragment extends Fragment {
 			HXSDKHelper.getInstance().removeSyncContactListener(contactSyncListener);
 			contactSyncListener = null;
 		}
-		
+
 		if(blackListSyncListener != null){
 		    HXSDKHelper.getInstance().removeSyncBlackListListener(blackListSyncListener);
 		}
-		
+
 		if(contactInfoSyncListener != null){
 			((DemoHXSDKHelper)HXSDKHelper.getInstance()).getUserProfileManager().removeSyncContactInfoListener(contactInfoSyncListener);
 		}
-		super.onDestroy();
+        if (mReceiver != null) {
+            getActivity().unregisterReceiver(mReceiver);
+        }
+        super.onDestroy();
 	}
-	
+
 	public void showProgressBar(boolean show) {
 		if (progressBar != null) {
 			if (show) {
@@ -480,13 +498,13 @@ public class ContactlistFragment extends Fragment {
 //            contactList.add(0, users.get(Constant.CHAT_ROOM));
         if(users.get(Constant.GROUP_USERNAME) != null)
             contactList.add(0, users.get(Constant.GROUP_USERNAME));
-        
+
 		// 把"申请与通知"添加到首位
 		if(users.get(Constant.NEW_FRIENDS_USERNAME) != null)
 		    contactList.add(0, users.get(Constant.NEW_FRIENDS_USERNAME));
-		
+
 	}
-	
+
 	void hideSoftKeyboard() {
         if (getActivity().getWindow().getAttributes().softInputMode != WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN) {
             if (getActivity().getCurrentFocus() != null)
@@ -494,7 +512,7 @@ public class ContactlistFragment extends Fragment {
                         InputMethodManager.HIDE_NOT_ALWAYS);
         }
     }
-	
+
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
@@ -503,6 +521,20 @@ public class ContactlistFragment extends Fragment {
 	    }else if(((MainActivity)getActivity()).getCurrentAccountRemoved()){
 	    	outState.putBoolean(Constant.ACCOUNT_REMOVED, true);
 	    }
-	    
+
 	}
+
+	class ContactListChangeReceiver extends BroadcastReceiver {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			refresh();
+		}
+	}
+
+	private void registerContactListChangRecevier(){
+		mReceiver = new ContactListChangeReceiver();
+		IntentFilter filter = new IntentFilter("update_contact_list");
+        getActivity().registerReceiver(mReceiver, filter);
+    }
 }

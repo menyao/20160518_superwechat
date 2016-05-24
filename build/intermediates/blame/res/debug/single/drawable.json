@@ -56,16 +56,16 @@
         "source": "D:\\superWeChatt\\res\\drawable\\chat_file_selector.xml"
     },
     {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\photogrid_list_selector.xml",
+        "source": "D:\\superWeChatt\\res\\drawable\\photogrid_list_selector.xml"
+    },
+    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\recording_text_hint_bg.xml",
         "source": "D:\\superWeChatt\\res\\drawable\\recording_text_hint_bg.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_white_pressed_shape.xml",
         "source": "D:\\superWeChatt\\res\\drawable\\btn_white_pressed_shape.xml"
-    },
-    {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\photogrid_list_selector.xml",
-        "source": "D:\\superWeChatt\\res\\drawable\\photogrid_list_selector.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\search_clear.xml",
@@ -216,12 +216,12 @@
         "source": "D:\\superWeChatt\\res\\drawable\\btn_gray_normal_shape.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\mobile.png",
-        "source": "D:\\superWeChatt\\res\\drawable\\mobile.png"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\smiley_minus_btn.xml",
         "source": "D:\\superWeChatt\\res\\drawable\\smiley_minus_btn.xml"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\mobile.png",
+        "source": "D:\\superWeChatt\\res\\drawable\\mobile.png"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\chat_video_selector.xml",
