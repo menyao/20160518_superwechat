@@ -280,12 +280,12 @@
         "source": "D:\\superWeChatt\\res\\drawable\\btn_blue_pressed_shape.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\call_hangup_bg.xml",
-        "source": "D:\\superWeChatt\\res\\drawable\\call_hangup_bg.xml"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_blue_selector.xml",
         "source": "D:\\superWeChatt\\res\\drawable\\btn_blue_selector.xml"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\call_hangup_bg.xml",
+        "source": "D:\\superWeChatt\\res\\drawable\\call_hangup_bg.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\call_answer_bg.xml",
