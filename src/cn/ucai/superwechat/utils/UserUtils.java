@@ -60,14 +60,20 @@ public class UserUtils {
         }
     }
 
-	public static void setUserBeanAvatar(String username, NetworkImageView imageView) {
-		Contact contact = getUserBeanInfo(username);
-        Log.e(TAG, "setUserBeanAvatar.contack  " + contact);
-        if (contact != null && contact.getMContactCname() != null) {
-			setUserAvatar(getAvatarPath(username), imageView);
+	public static void setUserBeanAvatar(User user, NetworkImageView imageView) {
+        Log.e(TAG, "setUserBeanAvatar.user  " + user);
+        if (user != null && user.getMUserName() != null) {
+			setUserAvatar(getAvatarPath(user.getMUserName()), imageView);
 		}
 	}
 
+	public static void setUserBeanAvatar(String username, NetworkImageView imageView) {
+		Contact contact = getUserBeanInfo(username);
+		Log.e(TAG, "setUserBeanAvatar.contack  " + contact);
+		if (contact != null && contact.getMContactCname() != null) {
+			setUserAvatar(getAvatarPath(username), imageView);
+		}
+	}
 	private static void setUserAvatar(String url, NetworkImageView imageView) {
         Log.e(TAG, "setUserAvatar");
         if (url==null || url.isEmpty())return;
@@ -117,11 +123,11 @@ public class UserUtils {
 	 */
 	public static void setUserBeanNick(String username,TextView textView) {
 		Contact userBeanInfo = getUserBeanInfo(username);
-		if (userBeanInfo != null) {
-			if (userBeanInfo.getMUserNick() != null) {
+		if (userBeanInfo!= null) {
+			if (userBeanInfo.getMUserNick()!= null) {
 
 				textView.setText(userBeanInfo.getMUserNick());
-			} else if (userBeanInfo.getMContactCname() != null) {
+			} else if (userBeanInfo.getMContactCname()!= null) {
 
 				textView.setText(userBeanInfo.getMContactCname());
 			}
@@ -129,6 +135,15 @@ public class UserUtils {
 			textView.setText(username);
 		}
 
+	}
+	public static void setUserBeanNick(User user,TextView textView) {
+		if (user!= null) {
+			if (user.getMUserNick()!= null) {
+				textView.setText(user.getMUserNick());
+			} else if (user.getMUserName()!= null) {
+				textView.setText(user.getMUserName());
+			}
+		}
 	}
 
     /**
@@ -140,7 +155,12 @@ public class UserUtils {
     		textView.setText(user.getNick());
     	}
     }
-
+    public static void setCurrentUserBeanNick(TextView textView){
+        User user = SuperWeChatApplication.getInstance().getUser();
+        if(user!=null && user.getMUserNick()!=null && textView != null){
+            textView.setText(user.getMUserNick());
+        }
+    }
     /**
      * 保存或更新某个用户
      */

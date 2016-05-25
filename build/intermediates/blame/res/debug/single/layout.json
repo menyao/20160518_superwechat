@@ -56,12 +56,12 @@
         "source": "D:\\superWeChatt\\res\\layout\\row_group.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\alert_dialog.xml",
-        "source": "D:\\superWeChatt\\res\\layout\\alert_dialog.xml"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\row_sent_voice.xml",
         "source": "D:\\superWeChatt\\res\\layout\\row_sent_voice.xml"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\alert_dialog.xml",
+        "source": "D:\\superWeChatt\\res\\layout\\alert_dialog.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\row_sent_file.xml",
@@ -272,12 +272,12 @@
         "source": "D:\\superWeChatt\\res\\layout\\row_received_file.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\row_invite_msg.xml",
-        "source": "D:\\superWeChatt\\res\\layout\\row_invite_msg.xml"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\activity_null.xml",
         "source": "D:\\superWeChatt\\res\\layout\\activity_null.xml"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\row_invite_msg.xml",
+        "source": "D:\\superWeChatt\\res\\layout\\row_invite_msg.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash.xml",
