@@ -24,6 +24,8 @@ import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
 import com.easemob.EMValueCallBack;
+
+import cn.ucai.superwechat.SuperWeChatApplication;
 import cn.ucai.superwechat.applib.controller.HXSDKHelper;
 import com.easemob.chat.EMChatManager;
 import cn.ucai.superwechat.DemoHXSDKHelper;
@@ -76,15 +78,15 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
 			headPhotoUpdate.setVisibility(View.GONE);
 			iconRightArrow.setVisibility(View.INVISIBLE);
 		}
-		if (username == null ||username.equals(EMChatManager.getInstance().getCurrentUser())) {
-			tvUsername.setText(EMChatManager.getInstance().getCurrentUser());
+		if (username == null ||username.equals(SuperWeChatApplication.getInstance().getUserName())) {
+			tvUsername.setText(SuperWeChatApplication.getInstance().getUserName());
 			UserUtils.setCurrentUserBeanNick(tvNickName);
 			UserUtils.setCurrentUserBeanAvatar(headAvatar);
 		}else {
 			tvUsername.setText(username);
 			UserUtils.setUserBeanNick(username, tvNickName);
 			UserUtils.setUserBeanAvatar(username, headAvatar);
-			asyncFetchUserInfo(username);
+			//asyncFetchUserInfo(username);
 		}
 	}
 

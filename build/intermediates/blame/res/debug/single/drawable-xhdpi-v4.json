@@ -4,12 +4,12 @@
         "source": "D:\\superWeChatt\\res\\drawable-xhdpi\\chat_file_pressed.png"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\group_icon.png",
-        "source": "D:\\superWeChatt\\res\\drawable-xhdpi\\group_icon.png"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\chatting_biaoqing_btn_enable.png",
         "source": "D:\\superWeChatt\\res\\drawable-xhdpi\\chatting_biaoqing_btn_enable.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\group_icon.png",
+        "source": "D:\\superWeChatt\\res\\drawable-xhdpi\\group_icon.png"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\create_group.png",
