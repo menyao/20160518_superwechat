@@ -6,8 +6,10 @@ import java.util.Comparator;
 import java.util.Hashtable;
 import java.util.List;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -300,4 +302,27 @@ public class ChatAllHistoryFragment extends Fragment implements View.OnClickList
     @Override
     public void onClick(View v) {        
     }
+
+	class ContactListChagedRecevier extends BroadcastReceiver {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			adapter.notifyDataSetChanged();
+		}
+	}
+	private ContactListChagedRecevier mContactListChagedRecevier;
+	private void registerContactListChanged() {
+		mContactListChagedRecevier = new ContactListChagedRecevier();
+		IntentFilter filter = new IntentFilter();
+		getActivity().registerReceiver(mContactListChagedRecevier, filter);
+	}
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		if (mContactListChagedRecevier != null) {
+			getActivity().unregisterReceiver(mContactListChagedRecevier);
+
+		}
+	}
 }

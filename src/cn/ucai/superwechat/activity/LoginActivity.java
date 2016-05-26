@@ -319,7 +319,7 @@ public class LoginActivity extends BaseActivity {
 
                         @Override
                         public void onResponse(com.squareup.okhttp.Response response) throws IOException {
-                            String avatarPath = I.AVATAR_PATH + I.BACKSLASH + currentUsername + I.AVATAR_SUFFIX_JPG;
+                            String avatarPath = I.AVATAR_TYPE+I.AVATAR_TYPE_USER_PATH + I.BACKSLASH + currentUsername + I.AVATAR_SUFFIX_JPG;
                             File file = OnSetAvatarListener.getAvatarFile(mContext, avatarPath);
                             Log.e(TAG, "file=" + file);
                             FileOutputStream fos = null;

@@ -525,6 +525,7 @@ public class ContactlistFragment extends Fragment {
         newFriends.setMUserName(Constant.NEW_FRIENDS_USERNAME);
 		String strChat = getActivity().getString(R.string.Application_and_notify);
 		newFriends.setMUserNick(strChat);
+
 		if (!mContactList.contains(newFriends)) {
 			this.mContactList.add(0,newFriends);
 		}
