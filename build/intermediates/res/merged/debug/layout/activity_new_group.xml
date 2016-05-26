@@ -36,6 +36,7 @@
             android:textSize="20sp" />
 
         <Button
+            android:id="@+id/btn_save_group"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -72,8 +73,37 @@
         android:paddingLeft="5dp"
         android:paddingTop="5dp"
         android:textSize="18sp" />
-    
-    
+
+    <LinearLayout
+        android:id="@+id/layout_group_icon"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_normal_shape"
+        >
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="group avatar"
+            android:textColor="#333"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:id="@+id/group_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_gravity="center_vertical"
+            android:button="@drawable/group_icon"
+            />
+
+    </LinearLayout>
     <LinearLayout 
         android:layout_width="match_parent"
        android:layout_height="39dp"
@@ -105,35 +135,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="39dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/button_normal_shape"
-        >
-        <TextView
-            android:layout_marginLeft="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Whether_the_public"
-            android:textColor="#333"
-            android:layout_gravity="center_vertical"
-            android:textSize="18sp"
-            android:layout_weight="1"
-            />
-
-        <CheckBox
-            android:id="@+id/lic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:layout_gravity="center_vertical"
-            android:button="@drawable/checkbox_bg_selector"
-            />
-
-    </LinearLayout>
-    <LinearLayout 
         android:id="@+id/ll_open_invite"
         android:layout_width="match_parent"
        android:layout_height="39dp"
