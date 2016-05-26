@@ -1,10 +1,10 @@
 /**
  * Copyright (C) 2013-2014 EaseMob Technologies. All rights reserved.
- *
+ * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -42,6 +42,7 @@ import com.easemob.EMCallBack;
 import cn.ucai.superwechat.I;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.applib.controller.HXSDKHelper;
+
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
 import com.squareup.okhttp.Callback;
@@ -91,7 +92,6 @@ public class LoginActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         mContext = this;
-
 
 
         // 如果用户名密码都有，直接进入主页面
@@ -242,7 +242,7 @@ public class LoginActivity extends BaseActivity {
         UserDao dao = new UserDao(mContext);
         User user = dao.findUserByUserName(currentUsername);
         Log.e(TAG, "loginAppServer = " + user);
-        if (user!= null) {
+        if (user != null) {
             if (user.getMUserPassword().equals(MD5.getData(currentPassword))) {
                 savaUser(user);
                 loginSuccess();
@@ -256,7 +256,7 @@ public class LoginActivity extends BaseActivity {
             try {
                 String path = new ApiParams().with(I.User.USER_NAME, currentUsername)
                         .with(I.User.PASSWORD, currentPassword).getRequestUrl(I.REQUEST_LOGIN);
-                Log.e(TAG,"path="+path);
+                Log.e(TAG, "path=" + path);
                 executeRequest(new GsonRequest<User>(path, User.class,
                         responseListener(), errorListener()));
             } catch (Exception e) {
@@ -269,7 +269,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     private Response.Listener<User> responseListener() {
-        pd=new ProgressDialog(LoginActivity.this);
+        pd = new ProgressDialog(LoginActivity.this);
         return new Response.Listener<User>() {
             @Override
             public void onResponse(User user) {
@@ -292,7 +292,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void savaUser(User user) {
-        Log.e(TAG,"savaUser "+user);
+        Log.e(TAG, "savaUser " + user);
         SuperWeChatApplication instance = SuperWeChatApplication.getInstance();
         instance.setUser(user);
         instance.setUserName(user.getMUserName());
@@ -309,8 +309,8 @@ public class LoginActivity extends BaseActivity {
             EMChatManager.getInstance().loadAllConversations();
             final OkHttpUtils<Message> utils = new OkHttpUtils<>();
             utils.url(SuperWeChatApplication.SERVER_ROOT)
-                    .addParam(I.KEY_REQUEST,I.REQUEST_DOWNLOAD_AVATAR)
-                    .addParam(I.AVATAR_TYPE,currentUsername)
+                    .addParam(I.KEY_REQUEST, I.REQUEST_DOWNLOAD_AVATAR)
+                    .addParam(I.AVATAR_TYPE, currentUsername)
                     .doInBackground(new Callback() {
                         @Override
                         public void onFailure(Request request, IOException e) {
@@ -319,7 +319,7 @@ public class LoginActivity extends BaseActivity {
 
                         @Override
                         public void onResponse(com.squareup.okhttp.Response response) throws IOException {
-                            String avatarPath = I.AVATAR_TYPE_USER_PATH + I.BACKSLASH + currentUsername + I.AVATAR_SUFFIX_JPG;
+                            String avatarPath = I.AVATAR_PATH + I.BACKSLASH + currentUsername + I.AVATAR_SUFFIX_JPG;
                             File file = OnSetAvatarListener.getAvatarFile(mContext, avatarPath);
                             Log.e(TAG, "file=" + file);
                             FileOutputStream fos = null;
@@ -331,10 +331,10 @@ public class LoginActivity extends BaseActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    new DownloadContactListTask(mContext,currentUsername).execute();
-                    new DownloadAllGroupsTask(mContext,currentUsername).execute();
-                    new DownloadPublicGroupsTask(mContext,currentUsername,
-                            I.PAGE_ID_DEFAULT,I.PAGE_SIZE_DEFAULT).execute();
+                    new DownloadContactListTask(mContext, currentUsername).execute();
+                    new DownloadAllGroupsTask(mContext, currentUsername).execute();
+                    new DownloadPublicGroupsTask(mContext, currentUsername,
+                            I.PAGE_ID_DEFAULT, I.PAGE_SIZE_DEFAULT).execute();
                 }
             });
             // 处理好友和群组
@@ -345,7 +345,7 @@ public class LoginActivity extends BaseActivity {
             runOnUiThread(new Runnable() {
                 public void run() {
                     pd.dismiss();
-                    DemoHXSDKHelper.getInstance().logout(true,null);
+                    DemoHXSDKHelper.getInstance().logout(true, null);
                     Toast.makeText(getApplicationContext(), cn.ucai.superwechat.R.string.login_failure_failed, Toast.LENGTH_LONG).show();
                 }
             });
@@ -354,7 +354,6 @@ public class LoginActivity extends BaseActivity {
         }
 
     }
-
 
 
     private void initializeContacts() {
