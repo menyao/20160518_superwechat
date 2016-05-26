@@ -241,20 +241,22 @@ public class LoginActivity extends BaseActivity {
     private void loginAppServer() {
         UserDao dao = new UserDao(mContext);
         User user = dao.findUserByUserName(currentUsername);
+        Log.e(TAG, "loginAppServer = " + user);
         if (user!= null) {
             if (user.getMUserPassword().equals(MD5.getData(currentPassword))) {
                 savaUser(user);
                 loginSuccess();
             } else {
                 pd.dismiss();
-                Toast.makeText(getApplicationContext(), R.string.login_failure_failed,
-                        Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), R.string.login_failure_failed,
+//                        Toast.LENGTH_LONG).show();
 
             }
         } else {
             try {
                 String path = new ApiParams().with(I.User.USER_NAME, currentUsername)
                         .with(I.User.PASSWORD, currentPassword).getRequestUrl(I.REQUEST_LOGIN);
+                Log.e(TAG,"path="+path);
                 executeRequest(new GsonRequest<User>(path, User.class,
                         responseListener(), errorListener()));
             } catch (Exception e) {
@@ -271,8 +273,12 @@ public class LoginActivity extends BaseActivity {
         return new Response.Listener<User>() {
             @Override
             public void onResponse(User user) {
+                Log.e(TAG, "responseListener " + user);
                 if (user.isResult()) {
                     savaUser(user);
+                    user.setMUserPassword(MD5.getData(user.getMUserPassword()));
+                    UserDao dao = new UserDao(mContext);
+                    dao.addUser(user);
                     loginSuccess();
 
                 } else {
@@ -286,6 +292,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void savaUser(User user) {
+        Log.e(TAG,"savaUser "+user);
         SuperWeChatApplication instance = SuperWeChatApplication.getInstance();
         instance.setUser(user);
         instance.setUserName(user.getMUserName());
@@ -300,7 +307,7 @@ public class LoginActivity extends BaseActivity {
             // ** manually load all local groups and
             EMGroupManager.getInstance().loadAllGroups();
             EMChatManager.getInstance().loadAllConversations();
-            final OkHttpUtils utils = new OkHttpUtils<>();
+            final OkHttpUtils<Message> utils = new OkHttpUtils<>();
             utils.url(SuperWeChatApplication.SERVER_ROOT)
                     .addParam(I.KEY_REQUEST,I.REQUEST_DOWNLOAD_AVATAR)
                     .addParam(I.AVATAR_TYPE,currentUsername)
@@ -312,8 +319,9 @@ public class LoginActivity extends BaseActivity {
 
                         @Override
                         public void onResponse(com.squareup.okhttp.Response response) throws IOException {
-                            String avatarPath = I.AVATAR_TYPE_USER_PATH + I.BACKSLASH + currentUsername + I.AVATAR_SUFFIX_JPG;
+                            String avatarPath = I.AVATAR_PATH + I.BACKSLASH + currentUsername + I.AVATAR_SUFFIX_JPG;
                             File file = OnSetAvatarListener.getAvatarFile(mContext, avatarPath);
+                            Log.e(TAG, "file=" + file);
                             FileOutputStream fos = null;
                             fos = new FileOutputStream(file);
                             utils.downloadFile(response, file, false);

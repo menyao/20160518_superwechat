@@ -28,12 +28,12 @@
         "source": "D:\\superWeChatt\\res\\drawable\\btn_white_normal_shape.xml"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\smiley_add_btn.xml",
-        "source": "D:\\superWeChatt\\res\\drawable\\smiley_add_btn.xml"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\timestampe_bg.xml",
         "source": "D:\\superWeChatt\\res\\drawable\\timestampe_bg.xml"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\smiley_add_btn.xml",
+        "source": "D:\\superWeChatt\\res\\drawable\\smiley_add_btn.xml"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_cancel_pressed_shape.xml",
