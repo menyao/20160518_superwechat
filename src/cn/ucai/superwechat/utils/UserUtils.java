@@ -72,6 +72,8 @@ public class UserUtils {
 		Log.e(TAG, "setUserBeanAvatar.contack  " + contact);
 		if (contact != null && contact.getMContactCname() != null) {
 			setUserAvatar(getAvatarPath(username), imageView);
+		} else {
+			imageView.setDefaultImageResId(R.drawable.default_avatar);
 		}
 	}
 	private static void setUserAvatar(String url, NetworkImageView imageView) {
