@@ -61,7 +61,6 @@ public class NewGroupActivity extends BaseActivity {
     OnSetAvatarListener mOnSetAvatarListener;
     ImageView IvAvatar;
     private static final int CREATE_NEW_GROUP=100;
-    String hxId;
     ProgressDialog pd;
 
 	@Override
@@ -163,7 +162,7 @@ public class NewGroupActivity extends BaseActivity {
 
     private void creatNewGroup(final Intent data) {
         final String st2 = getResources().getString(R.string.Failed_to_create_groups);
-        new Thread(new Runnable() {
+        runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 // 调用sdk创建群组方法
@@ -191,7 +190,7 @@ public class NewGroupActivity extends BaseActivity {
                         emGroup=EMGroupManager.getInstance().createPrivateGroup(groupName, desc, members, memberCheckbox.isChecked(),200);
                     }
                     createNewGroupAppServer(emGroup.getGroupId(), groupName, desc, contacts);
-                    hxId = emGroup.getGroupId();
+                    String hxId = emGroup.getGroupId();
                     runOnUiThread(new Runnable() {
                         public void run() {
                             progressDialog.dismiss();
@@ -209,10 +208,10 @@ public class NewGroupActivity extends BaseActivity {
                 }
 
             }
-        }).start();
+        });
     }
 
-    private void createNewGroupAppServer(String groupId, String groupName, String desc, final Contact[] contacts) {
+    private void createNewGroupAppServer(String hxid, String groupName, String desc, final Contact[] contacts) {
         User user = SuperWeChatApplication.getInstance().getUser();
         boolean isPublic = checkBox.isChecked();
         boolean isInvites = memberCheckbox.isChecked();
@@ -224,7 +223,7 @@ public class NewGroupActivity extends BaseActivity {
         final OkHttpUtils<Group> utils = new OkHttpUtils<Group>();
         utils.url(SuperWeChatApplication.SERVER_ROOT)
                 .addParam(I.KEY_REQUEST,I.REQUEST_CREATE_GROUP)
-                .addParam(I.Group.HX_ID, hxId)
+                .addParam(I.Group.HX_ID, hxid)
                 .addParam(I.Group.NAME, groupName)
                 .addParam(I.Group.DESCRIPTION, desc)
                 .addParam(I.Group.OWNER, user.getMUserName())

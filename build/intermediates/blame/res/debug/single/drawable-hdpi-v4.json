@@ -352,12 +352,12 @@
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\type_select_btn_nor.png"
     },
     {
-        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_22.png",
-        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\ee_22.png"
-    },
-    {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\voice_unread.png",
         "source": "D:\\superWeChatt\\res\\drawable-hdpi\\voice_unread.png"
+    },
+    {
+        "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ee_22.png",
+        "source": "D:\\superWeChatt\\res\\drawable-hdpi\\ee_22.png"
     },
     {
         "merged": "D:\\superWeChatt\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_marka.png",
