@@ -326,6 +326,7 @@
     <string name="exit_group">Exit</string>
     <string name="exit_group_hint">The group messages will not be received after exiting the group</string>
     <string name="expression">[expression]</string>
+    <string name="failed_to_create_groups">Failed to create groups</string>
     <string name="failed_to_load_data">Failed to load data, please check network or try again later</string>
     <string name="failed_to_move_into">Failed to move to the blacklist, please check the network or try again later</string>
     <string name="file">[file]</string>

@@ -87,7 +87,7 @@
             android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="group avatar"
+            android:text="群组头像"
             android:textColor="#333"
             android:layout_gravity="center_vertical"
             android:textSize="18sp"
@@ -98,7 +98,7 @@
             android:id="@+id/group_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
+            android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:button="@drawable/group_icon"
             />

@@ -275,6 +275,7 @@
     <string name="error_send_not_in_the_group">You already were not in the group</string>
     <string name="refreshing_group_list">Refreshing group list</string>
     <string name="failed_to_load_data">Failed to load data, please check network or try again later</string>
+    <string name="failed_to_create_groups">Failed to create groups</string>
     <string name="searching">searching</string>
     <string name="hanging_up">Hanging up..</string>
     <string name="illegal_user_name">Illegal user name</string>
