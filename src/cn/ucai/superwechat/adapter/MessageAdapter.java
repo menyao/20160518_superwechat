@@ -573,7 +573,11 @@ public class MessageAdapter extends BaseAdapter{
 	        //显示自己头像
 	        UserUtils.setCurrentUserBeanAvatar(imageView);
 	    }else{
-	        UserUtils.setUserBeanAvatar(message.getFrom(), imageView);
+			if (message.getChatType() == ChatType.GroupChat) {
+				UserUtils.setUserAvatar(message.getFrom(), imageView);
+			} else {
+				UserUtils.setUserBeanAvatar(message.getFrom(), imageView);
+			}
 	    }
 	    imageView.setOnClickListener(new View.OnClickListener() {
 			

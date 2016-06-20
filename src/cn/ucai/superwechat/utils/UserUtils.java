@@ -76,7 +76,7 @@ public class UserUtils {
 			imageView.setDefaultImageResId(R.drawable.default_avatar);
 		}
 	}
-	private static void setUserAvatar(String url, NetworkImageView imageView) {
+	public static void setUserAvatar(String url, NetworkImageView imageView) {
         Log.e(TAG, "setUserAvatar");
         if (url==null || url.isEmpty())return;
 		imageView.setDefaultImageResId(R.drawable.default_avatar);

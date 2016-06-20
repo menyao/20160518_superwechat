@@ -282,7 +282,8 @@ public class ContactlistFragment extends Fragment {
                 String username = adapter.getItem(position).getMContactCname();
                 if (Constant.NEW_FRIENDS_USERNAME.equals(username)) {
                     // 进入申请与通知页面
-                    EMUser user = ((DemoHXSDKHelper)HXSDKHelper.getInstance()).getContactList().get(Constant.NEW_FRIENDS_USERNAME);
+                    EMUser user = ((DemoHXSDKHelper)HXSDKHelper.getInstance())
+							.getContactList().get(Constant.NEW_FRIENDS_USERNAME);
                     user.setUnreadMsgCount(0);
                     startActivity(new Intent(getActivity(), NewFriendsMsgActivity.class));
                 } else if (Constant.GROUP_USERNAME.equals(username)) {

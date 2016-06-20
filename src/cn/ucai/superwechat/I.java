@@ -194,7 +194,7 @@ public interface I {
 	/** 客户端发送的下载多个群成员请求 */
 	String REQUEST_DOWNLOAD_GROUP_MEMBERS_BY_HXID 	= 		"download_group_members_by_hxid";
 	/** 客户端发送的下载多个群成员请求 */
-	String REQUEST_DOWNLOAD_GROUP_MEMBERS_BY_HXID_LIMIT 	= 		"download_group_members_by_hxid_limit";
+	String REQUEST_DOWNLOAD_GROUP_MEMBERS_BY_HXID_LIMIT 	= "download_group_members_by_hxid_limit";
 	/** 客户端发送的删除群成员请求 */
 	String REQUEST_DELETE_GROUP_MEMBER 				= 		"delete_group_member";
 	/** 客户端发送的删除多个群成员请求 */

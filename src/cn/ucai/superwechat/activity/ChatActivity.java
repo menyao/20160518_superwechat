@@ -22,7 +22,10 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
@@ -1753,4 +1756,17 @@ public class ChatActivity extends BaseActivity implements OnClickListener, EMEve
 		return listView;
 	}
 
+	class GroupMemberRecevier extends BroadcastReceiver {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			adapter.notifyDataSetChanged();
+		}
+	}
+	GroupMemberRecevier mRecevier;
+	private void registerGroupMemberUpdate(){
+		mRecevier = new GroupMemberRecevier();
+		IntentFilter inflater = new IntentFilter("update_group_member");
+		registerReceiver(mRecevier, inflater);
+	}
 }
